@@ -133,7 +133,7 @@ const Privacy = () => {
                   If you have questions about this Privacy Policy, please contact us:
                 </p>
                 <p className="text-gray-600 mb-2">
-                  <strong>Email:</strong> privacy@tengokusolutions.com
+                  <strong>Email:</strong> info@tengokusolutions.com
                 </p>
                 <p className="text-gray-600">
                   <strong>Address:</strong> S.n. 21/4/c,b 504,5th Flr, Goldville, Dange Chowk, Chinchwadgaon, Pune, Maharashtra, India, 411033
