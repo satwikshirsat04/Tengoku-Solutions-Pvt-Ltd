@@ -43,9 +43,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-energy-gradient rounded-lg flex items-center justify-center">
+              {/* <div className="w-8 h-8 bg-energy-gradient rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
+              </div> */}
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                <img src="/images/home/Tengoku Solutions.png" alt="logo" />
               </div>
+              
               <span className="text-xl font-bold bg-gradient-to-r from-energy-blue to-energy-green bg-clip-text text-transparent">
                 Tengoku Solutions
               </span>
