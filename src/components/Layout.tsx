@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-  
+
   const scrollToQuote = () => {
     const quoteSection = document.getElementById("quote-section");
     if (quoteSection) {
@@ -49,7 +49,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                 <img src="/images/home/Tengoku Solutions.png" alt="logo" />
               </div>
-              
+
               <span className="text-xl font-bold bg-gradient-to-r from-energy-blue to-energy-green bg-clip-text text-transparent">
                 Tengoku Solutions
               </span>
@@ -61,16 +61,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-energy-blue ${
-                    isActive(item.href)
+                  className={`text-sm font-medium transition-colors hover:text-energy-blue ${isActive(item.href)
                       ? "text-energy-blue border-b-2 border-energy-blue pb-1"
                       : "text-gray-600"
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button 
+              <Button
                 className="bg-energy-gradient hover:opacity-90 text-white"
                 onClick={scrollToQuote}
               >
@@ -99,18 +98,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors ${
-                    isActive(item.href)
+                  className={`block px-3 py-2 text-base font-medium transition-colors ${isActive(item.href)
                       ? "text-energy-blue bg-energy-light"
                       : "text-gray-600 hover:text-energy-blue hover:bg-gray-50"
-                  }`}
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button 
+                <Button
                   className="w-full bg-energy-gradient hover:opacity-90 text-white"
                   onClick={() => {
                     scrollToQuote();
@@ -137,8 +135,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Company Logo and Description */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-energy-gradient rounded-lg flex items-center justify-center">
+                {/* <div className="w-8 h-8 bg-energy-gradient rounded-lg flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
+                </div> */}
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                  <img src="/images/home/Tengoku Solutions.png" alt="logo" />
                 </div>
                 <span className="text-xl font-bold">Tengoku Solutions</span>
               </div>
@@ -210,7 +211,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </footer>
-      
+
       {/* Floating Call Button */}
       <FloatingCallButton />
     </div>
