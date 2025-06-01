@@ -141,7 +141,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                   <img src="/images/home/Tengoku Solutions.png" alt="logo" />
                 </div>
-                <span className="text-xl font-bold">Tengoku Solutions</span>
+                <span className="text-xl font-bold">Tengoku Solutions Pvt Ltd</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
                 Leading provider of innovative biochar solutions for agriculture, water filtration, and carbon sequestration.
