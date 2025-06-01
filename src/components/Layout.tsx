@@ -205,7 +205,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Tengoku Solutions. All rights reserved.</p>
+            <p>&copy; 2025 Tengoku Solutions Pvt Ltd. All rights reserved.</p>
             <span><Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions |</Link></span>
             <span><Link to="/privacy" className="hover:text-white transition-colors"> Privacy Policy</Link></span>
           </div>
