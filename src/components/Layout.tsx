@@ -50,9 +50,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img src="/images/home/Tengoku Solutions.png" alt="logo" />
               </div>
 
-              <span className="text-xl font-bold bg-gradient-to-r from-energy-blue to-energy-green bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-orange-700 to-green-800 bg-clip-text text-transparent">
                 Tengoku Solutions
               </span>
+
             </Link>
 
             {/* Desktop Navigation */}
@@ -62,8 +63,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   key={item.name}
                   to={item.href}
                   className={`text-sm font-medium transition-colors hover:text-energy-blue ${isActive(item.href)
-                      ? "text-energy-blue border-b-2 border-energy-blue pb-1"
-                      : "text-gray-600"
+                    ? "text-energy-blue border-b-2 border-energy-blue pb-1"
+                    : "text-gray-600"
                     }`}
                 >
                   {item.name}
@@ -99,8 +100,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   key={item.name}
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors ${isActive(item.href)
-                      ? "text-energy-blue bg-energy-light"
-                      : "text-gray-600 hover:text-energy-blue hover:bg-gray-50"
+                    ? "text-energy-blue bg-energy-light"
+                    : "text-gray-600 hover:text-energy-blue hover:bg-gray-50"
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
