@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { 
+import {
   Form,
   FormControl,
   FormField,
@@ -41,20 +40,125 @@ const QuoteForm = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Form submitted:", data);
-      toast({
-        title: "Quote request submitted!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      form.reset();
-      setIsSubmitting(false);
-    }, 1000);
-  };
+  // const onSubmit = async (data: FormData) => {
+  //   setIsSubmitting(true);
+
+  //   try {
+  //     const response = await fetch('http://localhost:5000/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         to: 'satwikpersonal04@gmail.com', // Your business email
+  //         from: data.email,
+  //         subject: `New Quote Request from ${data.name}`,
+  //         text: `
+  //           Name: ${data.name}
+  //           Email: ${data.email}
+  //           Phone: ${data.phone}
+  //           Company: ${data.company || 'Not provided'}
+  //           Message: ${data.message || 'No additional message'}
+
+  //           This is a new quote request from your website.
+  //         `,
+  //         html: `
+  //           <h1>New Quote Request</h1>
+  //           <p><strong>Name:</strong> ${data.name}</p>
+  //           <p><strong>Email:</strong> ${data.email}</p>
+  //           <p><strong>Phone:</strong> ${data.phone}</p>
+  //           <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
+  //           <p><strong>Message:</strong> ${data.message || 'No additional message'}</p>
+  //           <p>This is a new quote request from your website.</p>
+  //         `
+  //       }),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error('Failed to send email');
+  //     }
+
+  //     // Send confirmation email to user
+  //     await fetch('/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         to: data.email,
+  //         from: 'satwikpersonal04@gmail.com',
+  //         subject: 'Thank you for your quote request',
+  //         text: `Dear ${data.name},\n\nThank you for requesting a quote from Tengoku Solutions. We have received your request and will get back to you within 24 hours.\n\nBest regards,\nThe Tengoku Solutions Team`,
+  //         html: `
+  //           <h1>Thank you for your quote request</h1>
+  //           <p>Dear ${data.name},</p>
+  //           <p>Thank you for requesting a quote from Tengoku Solutions. We have received your request and will get back to you within 24 hours.</p>
+  //           <p>Best regards,<br>The Tengoku Solutions Team</p>
+  //         `
+  //       }),
+  //     });
+
+  //     toast({
+  //       title: "Quote request submitted!",
+  //       description: "We'll get back to you within 24 hours. A confirmation has been sent to your email.",
+  //       variant: "default",
+  //     });
+
+  //     form.reset();
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     toast({
+  //       title: "Something went wrong",
+  //       description: "Please try again later or contact us directly.",
+  //       variant: "destructive",
+  //     });
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+const onSubmit = async (data: FormData) => {
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch('http://localhost:5000/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+        message: data.message
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || 'Failed to submit quote request');
+    }
+
+    toast({
+      title: "Quote request submitted!",
+      description: result.message || "Our team will contact you shortly.",
+      variant: "default",
+    });
+
+    form.reset();  // Reset the form on success
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    toast({
+      title: "Something went wrong",
+      description: "Please try again later or contact us directly.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <Form {...form}>
@@ -120,10 +224,10 @@ const QuoteForm = () => {
             <FormItem>
               <FormLabel>How can we help you? (Optional)</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Tell us about your project and energy requirements..." 
-                  className="min-h-[120px]" 
-                  {...field} 
+                <Textarea
+                  placeholder="Tell us about your project and energy requirements..."
+                  className="min-h-[120px]"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
