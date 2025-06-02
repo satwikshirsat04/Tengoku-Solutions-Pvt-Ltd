@@ -50,7 +50,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img src="/images/home/Tengoku Solutions.png" alt="logo" />
               </div>
 
-              <span className="text-xl font-bold bg-gradient-to-r from-orange-700 to-green-800 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-energy-blue to-energy-green bg-clip-text text-transparent">
                 Tengoku Solutions
               </span>
 
