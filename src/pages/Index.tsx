@@ -38,12 +38,12 @@ const Index = () => {
 
   const heroSlides = [
     {
-      image: "/images/home/c5.webp",
-      quote: "Transforming Agriculture with Sustainable Biochar Solutions"
+      image: "/images/home/wastetobio.webp",
+      quote: "From Waste to Bio Products: A Sustainable Future"
     },
     {
-      image: "/images/home/c2.webp",
-      quote: "Building Healthier Soils for Future Generations"
+      image: "/images/home/c5.webp",
+      quote: "Transforming Agriculture with Sustainable Biochar Solutions"
     },
     {
       image: "/images/home/c3.webp",
