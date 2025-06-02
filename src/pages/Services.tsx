@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -140,26 +139,6 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      {/* <section className="py-20 bg-gradient-to-br from-energy-light to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Comprehensive biochar solutions and services designed to transform your agricultural 
-              practices, improve environmental sustainability, and maximize your investment returns.
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-energy-gradient hover:opacity-90 text-white">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section> */}
-      {/* Hero Section */}
       <section className="py-20 bg-hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
@@ -171,7 +150,7 @@ const Services = () => {
               practices, improve environmental sustainability, and maximize your investment returns.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-energy-gradient hover:opacity-90 text-white mt-5">
+              <Button size="lg" className="bg-white hover:opacity-90 text-gray-900 mt-5">
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
