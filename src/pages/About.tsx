@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { Users, Target, Award, Globe, Lightbulb, Heart, Smile, FileText, Flag, Mail, Linkedin, Twitter } from "lucide-react";
+import { Users, Target, Award, Globe, Lightbulb, Heart, Smile, FileText, Flag, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const About = () => {
   const team = [
@@ -15,7 +15,8 @@ const About = () => {
       bio: "15+ years in renewable energy, former Tesla executive with expertise in scaling clean technology solutions.",
       email: "david@tengoku.com",
       linkedin: "https://linkedin.com/in/davidchen",
-      twitter: "https://twitter.com/davidchen"
+      twitter: "https://twitter.com/davidchen",
+      instagram: "https://instagram.com/davidchen"
     },
     {
       name: "Sarah Martinez",
@@ -24,7 +25,8 @@ const About = () => {
       bio: "PhD in Electrical Engineering, solar technology innovator with 20+ patents in renewable energy systems.",
       email: "sarah@tengoku.com",
       linkedin: "https://linkedin.com/in/sarahmartinez",
-      twitter: "https://twitter.com/sarahmartinez"
+      twitter: "https://twitter.com/sarahmartinez",
+      instagram: "https://instagram.com/sarahmartinez"
     },
     {
       name: "Michael Johnson",
@@ -33,7 +35,8 @@ const About = () => {
       bio: "Project management expert with 500+ installations across North America and proven track record in scaling operations.",
       email: "michael@tengoku.com",
       linkedin: "https://linkedin.com/in/michaeljohnson",
-      twitter: "https://twitter.com/michaeljohnson"
+      twitter: "https://twitter.com/michaeljohnson",
+      instagram: "https://instagram.com/michaeljohnson"
     },
     {
       name: "Emily Rodriguez",
@@ -42,7 +45,8 @@ const About = () => {
       bio: "Environmental scientist focused on clean energy solutions with expertise in carbon sequestration and biochar applications.",
       email: "emily@tengoku.com",
       linkedin: "https://linkedin.com/in/emilyrodriguez",
-      twitter: "https://twitter.com/emilyrodriguez"
+      twitter: "https://twitter.com/emilyrodriguez",
+      instagram: "https://instagram.com/emilyrodriguez"
     }
   ];
 
@@ -95,7 +99,7 @@ const About = () => {
               About Us
             </h1>
             <p className="text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
-              We're on a mission to accelerate the world's transition to sustainable energy 
+              We're on a mission to accelerate the world's transition to sustainable energy
               through innovative solutions and unwavering commitment to excellence.
             </p>
           </div>
@@ -111,12 +115,12 @@ const About = () => {
                 Leading the Clean Energy Revolution
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Since 2024, Tengoku Solutions Pvt Ltd has been at the forefront of sustainable energy innovation, 
-                transforming how communities and businesses approach renewable energy and carbon sequestration. 
-                Our cutting-edge biochar technology and comprehensive energy solutions have made a measurable 
+                Since 2024, Tengoku Solutions Pvt Ltd has been at the forefront of sustainable energy innovation,
+                transforming how communities and businesses approach renewable energy and carbon sequestration.
+                Our cutting-edge biochar technology and comprehensive energy solutions have made a measurable
                 impact on environmental sustainability.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl">
                   <div className="text-4xl font-bold text-energy-blue mb-2">
@@ -144,11 +148,11 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
-              <img 
-                src="images/about/company1.webp" 
-                alt="Tengoku Solutions Facility" 
+              <img
+                src="images/about/company1.webp"
+                alt="Tengoku Solutions Facility"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl">
@@ -176,9 +180,9 @@ const About = () => {
               <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
             </div>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              To make renewable energy accessible, affordable, and reliable for everyone while pioneering 
-              biochar solutions that transform agricultural practices and combat climate change. We believe 
-              that sustainable energy is not just an environmental imperative, but an economic opportunity 
+              To make renewable energy accessible, affordable, and reliable for everyone while pioneering
+              biochar solutions that transform agricultural practices and combat climate change. We believe
+              that sustainable energy is not just an environmental imperative, but an economic opportunity
               that benefits communities worldwide.
             </p>
           </div>
@@ -235,8 +239,8 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -248,18 +252,22 @@ const About = () => {
                 </div>
                 <CardContent className="p-8">
                   <p className="text-gray-600 mb-6 leading-relaxed">{member.bio}</p>
-                  <div className="flex space-x-3">
+                  <div className="flex justify-center space-x-3">
                     <Button size="sm" variant="outline" className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />
-                      <span>Contact</span>
+                      
                     </Button>
                     <Button size="sm" variant="outline" className="flex items-center space-x-2">
                       <Linkedin className="w-4 h-4" />
-                      <span>LinkedIn</span>
+
                     </Button>
                     <Button size="sm" variant="outline" className="flex items-center space-x-2">
                       <Twitter className="w-4 h-4" />
-                      <span>Follow</span>
+
+                    </Button>
+                    <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                      <Instagram className="w-4 h-4" />
+
                     </Button>
                   </div>
                 </CardContent>
@@ -278,7 +286,7 @@ const About = () => {
                 <Smile className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-4xl font-bold text-gray-900">
-                Adding Smiles on Farmers' Faces
+                Adding Smiles on Farmer's Faces
               </h2>
             </div>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
@@ -290,16 +298,16 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=400&fit=crop" 
-                  alt="Farmer with biochar" 
+                <img
+                  src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=400&fit=crop"
+                  alt="Farmer with biochar"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-8">
                 <h3 className="font-bold text-xl mb-4">Yield Improvements</h3>
                 <p className="text-gray-600 mb-6">
-                  Farmers using our biochar products have seen crop yields increase by 
+                  Farmers using our biochar products have seen crop yields increase by
                   <span className="font-bold text-energy-blue"> <AnimatedCounter end={30} suffix="%" duration={2000} /></span>
                   on average.
                 </p>
@@ -308,12 +316,12 @@ const About = () => {
                 </Badge>
               </CardContent>
             </Card>
-            
+
             <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&h=400&fit=crop" 
-                  alt="Sustainable farming" 
+                <img
+                  src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&h=400&fit=crop"
+                  alt="Sustainable farming"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -329,12 +337,12 @@ const About = () => {
                 </Badge>
               </CardContent>
             </Card>
-            
+
             <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&h=400&fit=crop" 
-                  alt="Biochar application" 
+                <img
+                  src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&h=400&fit=crop"
+                  alt="Biochar application"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -361,7 +369,7 @@ const About = () => {
             Join Us in Building a Sustainable Future
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Whether you're looking for energy solutions or want to be part of our mission, 
+            Whether you're looking for energy solutions or want to be part of our mission,
             we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
