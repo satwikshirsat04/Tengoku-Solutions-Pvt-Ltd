@@ -121,12 +121,12 @@ const Index = () => {
     //   description: "International certifications and adherence to highest quality standards",
     //   subPoints: ["IBI certified products", "ISO compliance", "Organic certifications"]
     // },
-    // {
-    //   icon: Heart,
-    //   title: "Environmental Impact",
-    //   description: "Significant carbon sequestration and environmental benefits",
-    //   subPoints: ["Carbon-negative process", "Waste biomass utilization", "Sustainable practices"]
-    // },
+    {
+      icon: Heart,
+      title: "Environmental Impact",
+      description: "Significant carbon sequestration and environmental benefits",
+      subPoints: ["Carbon-negative process", "Waste biomass utilization", "Sustainable practices"]
+    },
     // {
     //   icon: Lightbulb,
     //   title: "Innovation Leadership",
