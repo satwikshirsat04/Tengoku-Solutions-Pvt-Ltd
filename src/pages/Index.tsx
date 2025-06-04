@@ -261,13 +261,63 @@ const Index = () => {
         <div className="min-h-[65vh] sm:min-h-[60vh] md:min-h-[55vh] lg:min-h-[60vh] bg-gradient-to-br from-blue-50 to-green-50 flex items-center py-4 sm:py-6 md:py-8 lg:py-12">
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 w-full">
             {/* Added hero text below carousel */}
-            <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 bg-gradient-to-r from-black to-green-900 backdrop-blur-sm py-4 px-6 rounded-xl shadow-sm max-w-3xl mx-auto">
+            {/* <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 bg-gradient-to-r from-black to-green-900 backdrop-blur-sm py-4 px-6 rounded-xl shadow-sm max-w-3xl mx-auto">
               <p className="text-base sm:text-lg md:text-xl font-medium text-white flex items-center justify-center">
                 <Sprout className="mr-2 w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" />
                 <span>
                   Biochar: Carbon-rich charcoal from organic waste, boosts soil fertility, and traps CO₂
                 </span>
               </p>
+            </div> */}
+
+            {/* Biochar Definition Section with Enhanced Particle Effect */}
+            <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 relative py-6 px-6 rounded-xl shadow-sm max-w-3xl mx-auto overflow-hidden bg-[#0a0a08] border border-[#2a3a1e]">
+              {/* Enhanced biochar particles background */}
+              <div className="absolute inset-0">
+                {[...Array(50)].map((_, i) => {
+                  const size = Math.random() * 10 + 3;
+                  const delay = Math.random() * 5;
+                  const duration = Math.random() * 15 + 10;
+                  return (
+                    <div
+                      key={i}
+                      className="absolute rounded-full bg-[#1a120b]"
+                      style={{
+                        width: `${size}px`,
+                        height: `${size}px`,
+                        left: `${Math.random() * 100}%`,
+                        bottom: `-${size}px`,
+                        opacity: Math.random() * 0.7 + 0.3,
+                        animation: `rise ${duration}s ease-in ${delay}s infinite`,
+                        boxShadow: '0 0 3px 1px rgba(74, 85, 44, 0.5)',
+                      }}
+                    />
+                  );
+                })}
+              </div>
+
+              {/* Soil texture overlay */}
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-soil.png')] opacity-70" />
+
+              <p className="text-base sm:text-lg md:text-xl font-medium text-[#e6ccb2] relative z-10 flex items-center justify-center">
+                <Sprout className="mr-2 w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" />
+                <span>
+                  Biochar: Carbon-rich charcoal from organic waste, boosts soil fertility, and traps CO₂
+                </span>
+              </p>
+
+              {/* Animation keyframes */}
+              <style>{`
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  `}</style>
             </div>
 
 
@@ -734,7 +784,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
       </section>
 
       {/* Get Quote Section */}
