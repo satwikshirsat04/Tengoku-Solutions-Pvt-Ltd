@@ -90,10 +90,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "500", label: "Projects Completed" },
+    { number: "100", label: "Projects Completed" },
+    { number: "1000", label: "Happy Clients" },
     { number: "250", label: "MW Energy Generated" },
-    { number: "50", label: "Happy Clients" },
-    { number: "99", label: "% Uptime Guarantee" }
+    { number: "98", label: "% Uptime Guarantee" }
   ];
 
   const whyChoosePoints = [
@@ -381,7 +381,7 @@ const Index = () => {
         </div>
       </section>
 
-      
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
@@ -467,7 +467,7 @@ const Index = () => {
                   </ul>
                   <Link to="/services">
                     <Button variant="outline" className="group-hover:bg-energy-blue group-hover:text-white transition-colors">
-                      Learn More
+                      Read More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -659,11 +659,11 @@ const Index = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Carbon Sequestered</span>
                     <span className="font-bold text-energy-blue">
-                      <AnimatedCounter end={50000} />+ tons
+                      <AnimatedCounter end={5000} />+ tons
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-energy-gradient h-3 rounded-full" style={{ width: '75%' }}></div>
+                    <div className="bg-black h-3 rounded-full" style={{ width: '75%' }}></div>
                   </div>
 
                   <div className="flex justify-between items-center">
@@ -679,7 +679,7 @@ const Index = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Countries Served</span>
                     <span className="font-bold text-energy-blue">
-                      <AnimatedCounter end={15} />
+                      <AnimatedCounter end={3} />
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3">
@@ -756,7 +756,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -773,11 +773,11 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-4 ">
                     <img
                       src={testimonial.logo}
                       alt={testimonial.company}
-                      className="h-10 object-contain"
+                      className="h-10 object-contain rounded-lg"  // Added rounded-lg here
                     />
                   </div>
                   <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
@@ -805,9 +805,9 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="tel:+15551234567">
+            <a href="tel:+917888009568">
               <Button size="lg" variant="outline" className="border-white text-energy-blue hover:bg-white/10">
-                Call (555) 123-4567
+                Call 7888009568
               </Button>
             </a>
           </div>
