@@ -42,7 +42,7 @@ const Index = () => {
       quote: "From Waste to Bio Products: A Sustainable Future"
     },
     {
-      image: "/images/home/c5.webp",
+      image: "/images/home/micro crop.webp",
       quote: "Transforming Agriculture with Sustainable Bio Solutions"
     },
     {
