@@ -18,26 +18,26 @@ const About = () => {
       twitter: "https://twitter.com/davidchen",
       instagram: "https://instagram.com/davidchen"
     },
-    {
-      name: "Sarah Martinez",
-      role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b9e57893?w=400&h=400&fit=crop&crop=face",
-      bio: "PhD in Electrical Engineering, solar technology innovator with 20+ patents in renewable energy systems.",
-      email: "sarah@tengoku.com",
-      linkedin: "https://linkedin.com/in/sarahmartinez",
-      twitter: "https://twitter.com/sarahmartinez",
-      instagram: "https://instagram.com/sarahmartinez"
-    },
-    {
-      name: "Michael Johnson",
-      role: "VP of Operations",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      bio: "Project management expert with 500+ installations across North America and proven track record in scaling operations.",
-      email: "michael@tengoku.com",
-      linkedin: "https://linkedin.com/in/michaeljohnson",
-      twitter: "https://twitter.com/michaeljohnson",
-      instagram: "https://instagram.com/michaeljohnson"
-    },
+    // {
+    //   name: "Sarah Martinez",
+    //   role: "CTO",
+    //   image: "https://images.unsplash.com/photo-1494790108755-2616b9e57893?w=400&h=400&fit=crop&crop=face",
+    //   bio: "PhD in Electrical Engineering, solar technology innovator with 20+ patents in renewable energy systems.",
+    //   email: "sarah@tengoku.com",
+    //   linkedin: "https://linkedin.com/in/sarahmartinez",
+    //   twitter: "https://twitter.com/sarahmartinez",
+    //   instagram: "https://instagram.com/sarahmartinez"
+    // },
+    // {
+    //   name: "Michael Johnson",
+    //   role: "VP of Operations",
+    //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    //   bio: "Project management expert with 500+ installations across North America and proven track record in scaling operations.",
+    //   email: "michael@tengoku.com",
+    //   linkedin: "https://linkedin.com/in/michaeljohnson",
+    //   twitter: "https://twitter.com/michaeljohnson",
+    //   instagram: "https://instagram.com/michaeljohnson"
+    // },
     {
       name: "Emily Rodriguez",
       role: "Head of Sustainability",
