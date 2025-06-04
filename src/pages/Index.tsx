@@ -43,7 +43,7 @@ const Index = () => {
     },
     {
       image: "/images/home/c5.webp",
-      quote: "Transforming Agriculture with Sustainable Biochar Solutions"
+      quote: "Transforming Agriculture with Sustainable Bio Solutions"
     },
     {
       image: "/images/home/c3.webp",
