@@ -260,7 +260,6 @@ const Index = () => {
         {/* Stats Section - Bottom 2/3 - Fully Responsive */}
         <div className="min-h-[65vh] sm:min-h-[60vh] md:min-h-[55vh] lg:min-h-[60vh] bg-gradient-to-br from-blue-50 to-green-50 flex items-center py-4 sm:py-6 md:py-8 lg:py-12">
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 w-full">
-            
 
             {/* Biochar Definition Section with Enhanced Particle Effect */}
             <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 relative py-6 px-6 rounded-xl shadow-sm max-w-3xl mx-auto overflow-hidden bg-[#0a0a08] border border-[#2a3a1e]">
@@ -289,7 +288,7 @@ const Index = () => {
               </div>
 
               {/* Soil texture overlay */}
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-soil.png')] opacity-70" />
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-soil.png')] opacity-100" />
 
               <p className="text-base sm:text-lg md:text-xl font-medium text-[#e6ccb2] relative z-10 flex items-center justify-center">
                 <Sprout className="mr-2 w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" />
