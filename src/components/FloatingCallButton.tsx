@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const FloatingCallButton = () => {
-  const phoneNumber = "+1 (555) 123-4567";
-  
+  const phoneNumber = "7888009568";
+
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber.replace(/[^\d+]/g, "")}`;
   };
 
-  return (
+  return ( 
     <motion.div 
       className="fixed bottom-6 right-6 z-50"
       initial={{ scale: 0.8, opacity: 0 }}
