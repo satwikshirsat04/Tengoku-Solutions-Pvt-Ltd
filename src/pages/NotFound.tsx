@@ -86,7 +86,7 @@ const NotFound = () => {
       </div>
 
       {/* Animation keyframes */}
-      <style>{`
+      <style jsx>{`
         @keyframes rise {
           0% {
             transform: translateY(0) rotate(0deg);
