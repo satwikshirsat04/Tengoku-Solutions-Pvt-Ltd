@@ -357,9 +357,9 @@ const Services = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <a href="tel:+15551234567">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Call (555) 123-4567
+            <a href="tel:+917888009568" className="flex items-center justify-center">
+              <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-energy-blue/10">
+                Call 7888009568
               </Button>
             </a>
           </div>
