@@ -140,37 +140,37 @@ const Index = () => {
       icon: Trees,
       title: "Climate Positive",
       description: "Biochar locks carbon in the soil for centuries, creating a significant carbon sink to combat climate change.",
-      backgroundImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Climate Positive.jpeg"
     },
     {
       icon: Droplets,
       title: "Water Efficiency",
       description: "Increases soil water holding capacity by up to 30%, reducing irrigation needs and improving drought resilience.",
-      backgroundImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Water Efficiency.webp"
     },
     {
       icon: Microscope,
       title: "Microbial Activity",
       description: "Creates ideal habitat for beneficial soil microorganisms, enhancing the soil food web and plant health.",
-      backgroundImage: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Microbial.webp"
     },
     {
       icon: Dumbbell,
       title: "Soil Structure",
       description: "Improves soil tilth, reduces compaction, and enhances root penetration for healthier, stronger plants.",
-      backgroundImage: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Soil Structure.jpeg"
     },
     {
       icon: ThermometerSun,
       title: "Climate Adaptation",
       description: "Helps agricultural systems adapt to climate extremes through improved soil resilience and stress tolerance.",
-      backgroundImage: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Climate Adaptation.jpeg"
     },
     {
       icon: Leaf,
       title: "Waste Reduction",
       description: "Converts agricultural and forestry waste into valuable soil amendments, closing the loop in biomass cycles.",
-      backgroundImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop"
+      backgroundImage: "/images/benifits/Waste Reduction.jpeg"
     }
   ];
 
@@ -635,7 +635,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Make in India */}
+            {/* Make in India - Keep this part unchanged */}
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Made in India</h2>
               <div className="relative overflow-hidden rounded-2xl">
@@ -651,45 +651,90 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Global Impact */}
+            {/* Improved Global Impact Section with Animated Bars */}
             <div className="text-center relative">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Global Impact</h2>
               <div className="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden">
-                <div className="relative z-10 space-y-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Carbon Sequestered</span>
-                    <span className="font-bold text-energy-blue">
-                      <AnimatedCounter end={5000} />+ tons
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-black h-3 rounded-full" style={{ width: '75%' }}></div>
+                <div className="relative z-10 space-y-8">
+                  <style>{`
+    @keyframes carbonBar {
+      from { width: 0%; }
+      to { width: 75%; }
+    }
+    @keyframes farmersBar {
+      from { width: 0%; }
+      to { width: 85%; }
+    }
+    @keyframes countriesBar {
+      from { width: 0%; }
+      to { width: 60%; }
+    }
+  `}</style>
+                  {/* Carbon Sequestered */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-600">Carbon Sequestered</span>
+                      <span className="font-bold text-energy-blue">
+                        <AnimatedCounter end={5000} suffix="+ tons" />
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                      <div
+                        className="bg-black h-3 rounded-full transition-all duration-1000"
+                        style={{
+                          width: '0%',
+                          animation: 'carbonBar 3s forwards',
+                          animationDelay: '0.2s'
+                        }}
+                      ></div>
+                    </div>
                   </div>
 
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Farmers Impacted</span>
-                    <span className="font-bold text-energy-blue">
-                      <AnimatedCounter end={1000} />+
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-green-500 h-3 rounded-full" style={{ width: '85%' }}></div>
+                  {/* Farmers Impacted */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-600">Farmers Impacted</span>
+                      <span className="font-bold text-energy-blue">
+                        <AnimatedCounter end={1000} suffix="+" />
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                      <div
+                        className="bg-green-500 h-3 rounded-full transition-all duration-1000"
+                        style={{
+                          width: '0%',
+                          animation: 'farmersBar 3s forwards',
+                          animationDelay: '0.4s'
+                        }}
+                      ></div>
+                    </div>
                   </div>
 
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Countries Served</span>
-                    <span className="font-bold text-energy-blue">
-                      <AnimatedCounter end={3} />
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div className="bg-blue-500 h-3 rounded-full" style={{ width: '60%' }}></div>
+                  {/* Countries Served */}
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-600">Countries Served</span>
+                      <span className="font-bold text-energy-blue">
+                        <AnimatedCounter end={3} />
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                      <div
+                        className="bg-blue-500 h-3 rounded-full transition-all duration-1000"
+                        style={{
+                          width: '0%',
+                          animation: 'countriesBar 3s forwards',
+                          animationDelay: '0.6s'
+                        }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* Get Quote Section */}
