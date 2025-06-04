@@ -150,10 +150,13 @@ const Services = () => {
               practices, improve environmental sustainability, and maximize your investment returns.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-white hover:opacity-90 text-gray-900 mt-5">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Button
+              size="lg"
+              className="bg-white hover:bg-green-500 hover:text-white text-gray-900 mt-8 transition-colors duration-300"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
             </Link>
           </div>
         </div>
