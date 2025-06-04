@@ -46,7 +46,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
+      content: "+91-7888009568",
       description: "Mon-Fri, 8AM-6PM PST"
     },
     {
