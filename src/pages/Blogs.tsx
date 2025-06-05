@@ -163,7 +163,7 @@ const Blogs = () => {
       </section>
 
       {/* Newsletter Signup */} 
-      <section className="py-20 bg-gradient-to-br from-green-800 to-green-600">
+      <section className="py-20 bg-gradient-to-br from-green-800 to-green-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Agricultural Practices?
