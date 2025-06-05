@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { toast, useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import {
   Phone,
@@ -28,26 +29,78 @@ const Contact = () => {
   });
 
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!agreedToTerms) {
       alert("Please agree to the Terms & Privacy Policy");
       return;
     }
-    console.log("Form submitted:", formData);
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to send message");
+      }
+
+      toast({
+        title: "Contact Form Submitted!",
+        description: result.message || "Our team will contact you shortly.",
+        variant: "default",
+      });
+
+      // Clear form
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: ""
+      });
+      setAgreedToTerms(false);
+
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      if (error instanceof Error) {
+        alert(`Error: ${error.message}`);
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
       content: "+91-7888009568",
-      description: "Mon-Fri, 8AM-6PM PST"
+      description: "Mon-Fri, 8AM-6PM IST"
     },
     {
       icon: Mail,
@@ -91,8 +144,8 @@ const Contact = () => {
     {
       city: "Pune",
       address: "S.n. 21/4/c,b 504,5th Flr, Goldville, Dange Chowk, Chinchwadgaon, Pune, Maharashtra, India, 411033",
-      phone: "+1 (555) 123-4567",
-      email: "pune@tengokusolutions.com"
+      phone: "+91-7888009568",
+      email: "info@tengokusolutions.com"
     }
   ];
 
@@ -203,11 +256,40 @@ const Contact = () => {
                       type="submit"
                       className="w-full bg-energy-gradient hover:opacity-90"
                       size="lg"
-                      disabled={!agreedToTerms}
+                      disabled={!agreedToTerms || isSubmitting}
                     >
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {isSubmitting ? (
+                        <>
+                          <svg
+                            className="animate-spin h-5 w-5 mr-2 text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                            ></path>
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5 mr-2" />
+                          Send Message
+                        </>
+                      )}
                     </Button>
+
                   </form>
                 </CardContent>
               </Card>
@@ -316,7 +398,7 @@ const Contact = () => {
           </p>
           <Button size="lg" className="bg-white text-energy-blue hover:bg-blue-50">
             <Phone className="w-5 h-5 mr-2" />
-            Call Now: (555) 123-4567
+            Call Now: +91-7888009568
           </Button>
         </div>
       </section>
