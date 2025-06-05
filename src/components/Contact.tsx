@@ -44,7 +44,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
+      content: "+91-7888009568",
       description: "Mon-Fri, 8AM-6PM PST"
     },
     {
@@ -89,8 +89,8 @@ const Contact = () => {
     {
       city: "Pune",
       address: "S.n. 21/4/c,b 504,5th Flr, Goldville, Dange Chowk, Chinchwadgaon, Pune, Pune City, Maharashtra, India, 411033",
-      phone: "+1 (555) 123-4567",
-      email: "pune@tengokusolutions.com"
+      phone: "+91-7888009568",
+      email: "info@tengokusolutions.com"
     }
   ];
 
@@ -333,7 +333,7 @@ const Contact = () => {
           <p className="text-lg text-blue-100 mb-8">
             Take the first step towards energy independence with a free consultation from our experts.
           </p>
-          <a href="tel:+15551234567" className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 text-sm font-medium bg-white text-energy-blue hover:bg-blue-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+          <a href="tel:+917888009568" className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 text-sm font-medium bg-white text-energy-blue hover:bg-blue-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
             <Phone className="w-5 h-5 mr-2" />
             Call Now: <AnimatedCounter end={555} suffix="-" duration={1500} /> <AnimatedCounter end={123} suffix="-" duration={1500} /> <AnimatedCounter end={4567} duration={1500} />
           </a>
