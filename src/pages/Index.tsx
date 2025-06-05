@@ -794,8 +794,8 @@ const Index = () => {
               <div className="flex items-center justify-center lg:justify-start mb-8 text-xl">
                 <div className="flex items-center text-energy-blue">
                   <Phone className="mr-2 h-6 w-6" />
-                  <a href="tel:+15551234567" className="font-semibold hover:underline">
-                    Call (555) 123-4567
+                  <a href="tel:+917888009568" className="font-semibold hover:underline">
+                    Call +91-7888009568
                   </a>
                 </div>
                 <span className="mx-3 text-gray-400">or</span>
