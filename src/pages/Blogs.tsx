@@ -162,8 +162,8 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-br from-green-800 to-gray-900">
+      {/* Newsletter Signup */} 
+      <section className="py-20 bg-gradient-to-br from-green-800 to-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Agricultural Practices?
@@ -173,13 +173,13 @@ const Blogs = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Link to="/contact">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+              <Button size="lg" className="bg-green-800 hover:bg-green-700 text-white">
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <a href="tel:+917888009568">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-white/10">
                 Call 7888009568
               </Button>
             </a>
