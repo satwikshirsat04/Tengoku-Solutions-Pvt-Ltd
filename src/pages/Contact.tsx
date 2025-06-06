@@ -15,7 +15,8 @@ import {
   CheckCircle2,
   MessageSquare,
   Users,
-  Calculator
+  Calculator,
+  ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -143,9 +144,11 @@ const Contact = () => {
   const offices = [
     {
       city: "Pune",
-      address: "S.n. 21/4/c,b 504,5th Flr, Goldville, Dange Chowk, Chinchwadgaon, Pune, Maharashtra, India, 411033",
+      address: "Kant Helix, 3rd floor, Bohir colony, opp. Tata Motors, Chinchwad, Pune, Maharashtra, India - 411033",
       phone: "+91-7888009568",
-      email: "info@tengokusolutions.com"
+      email: "info@tengokusolutions.com",
+      image: "/images/locations/pune.jpg",
+      mapLink: "https://www.google.com/maps/dir//411033,+Dhoka+Colony,+Chinchwad,+Pimpri-Chinchwad,+Pune,+Maharashtra+411033/@18.6342448,73.7054917,34149m/data=!3m2!1e3!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3bc2b9b6bbe73f2f:0x6401a5551566b8a3!2m2!1d73.7878934!2d18.6342627?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
     }
   ];
 
@@ -341,7 +344,7 @@ const Contact = () => {
       </section>
 
       {/* Office Locations */}
-      <section className="py-20 bg-energy-light">
+      {/* <section className="py-20 bg-energy-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -376,14 +379,113 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      <div className="text-center mt-10 mb-10">
-        <p className="text-gray-700 text-base mb-3">Have more questions?</p>
+      {/* Office Locations */}
+      <section className="py-20 bg-energy-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center bg-green-100 rounded-full p-4 mb-6">
+              <MapPin className="w-8 h-8 text-green-600" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Location
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Visit us at our office or get in touch with our team
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Card className="hover:shadow-lg transition-shadow group overflow-hidden relative max-w-md w-full">
+              {/* Location pin decoration */}
+              <div className="absolute top-4 right-4 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-green-600" />
+              </div>
+
+              {/* Office image */}
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={offices[0].image || "/images/locations/default-office.jpg"}
+                  alt={offices[0].city}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+                  <span className="bg-energy-gradient text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                    1
+                  </span>
+                  {offices[0].city}
+                </h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="bg-green-50 p-2 rounded-lg mr-3">
+                      <MapPin className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-1">Address</h4>
+                      <p className="text-gray-700">{offices[0].address}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="bg-green-50 p-2 rounded-lg mr-3">
+                      <Phone className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-1">Phone</h4>
+                      <a href={`tel:${offices[0].phone}`} className="text-gray-700 hover:text-energy-blue">
+                        {offices[0].phone}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="bg-green-50 p-2 rounded-lg mr-3">
+                      <Mail className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-1">Email</h4>
+                      <a href={`mailto:${offices[0].email}`} className="text-gray-700 hover:text-energy-blue">
+                        {offices[0].email}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <Button
+                  variant="outline"
+                  className="mt-6 w-full group-hover:bg-energy-blue group-hover:text-white transition-colors"
+                  asChild
+                >
+                  <a href={offices[0].mapLink} target="_blank" rel="noopener noreferrer">
+                    View on Map <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section with Glow Button */}
+      <div className="text-center mt-12 mb-12">
+        <p className="text-gray-700 text-lg mb-6">Have more questions?</p>
         <Link
           to="/FAQ"
-          className="inline-block bg-black text-white px-6 py-2 rounded-md shadow hover:bg-green-700 transition"
+          className="relative group inline-block px-8 py-3 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          Visit FAQ Page
+          {/* Glow effect */}
+          <div className="absolute inset-0 rounded-full bg-green-500 opacity-0 group-hover:opacity-50 blur-md group-hover:scale-110 transition-all duration-300"></div>
+
+          {/* Button content */}
+          <div className="flex items-center space-x-2 relative z-10">
+            <span className="text-white font-semibold text-lg">
+              Visit FAQ Page
+            </span>
+            <ArrowRight className="w-5 h-5 text-white" />
+          </div>
         </Link>
       </div>
 
