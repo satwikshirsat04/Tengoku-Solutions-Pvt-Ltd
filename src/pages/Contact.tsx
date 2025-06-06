@@ -112,7 +112,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office",
-      content: "S.n. 21/4/c,b 504,5th Flr, Goldville, Dange Chowk, Chinchwadgaon, Pune, Maharashtra, India, 411033",
+      content: "Kant Helix, 3rd floor, Bohir colony, opp. Tata Motors, Chinchwad, Pune, Maharashtra, India - 411033",
       description: "Visit our headquarters"
     },
     {
