@@ -288,7 +288,7 @@ const Products = () => {
               </Button>
             </Link>
             <Link to="/technical-specs">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-white/10">
                 Download Full Specs
               </Button>
             </Link>
