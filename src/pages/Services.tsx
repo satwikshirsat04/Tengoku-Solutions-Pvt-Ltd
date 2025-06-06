@@ -151,12 +151,12 @@ const Services = () => {
             </p>
             <Link to="/contact">
               <Button
-              size="lg"
-              className="bg-white hover:bg-green-500 hover:text-white text-gray-900 mt-8 transition-colors duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+                size="lg"
+                className="bg-white hover:bg-green-500 hover:text-white text-gray-900 mt-8 transition-colors duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
             </Link>
           </div>
         </div>
@@ -242,7 +242,7 @@ const Services = () => {
       </section>
 
       {/* Our Bio Products Section */}
-      <section className="py-20 bg-energy-light">
+      {/* <section className="py-20 bg-energy-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -307,6 +307,19 @@ const Services = () => {
             ))}
           </div>
         </div>
+      </section> */}
+      <section className="py-10 bg-energy-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Link to="/products">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-green-500 hover:text-white text-gray-900 mt-8 transition-colors duration-300"
+            >
+              Our Products
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
+        </div>
       </section>
 
       {/* Additional Services */}
@@ -359,7 +372,7 @@ const Services = () => {
             </Link>
             <a href="tel:+917888009568" className="flex items-center justify-center">
               <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-energy-blue/10">
-                Call 7888009568
+                Call +91 7888009568
               </Button>
             </a>
           </div>
