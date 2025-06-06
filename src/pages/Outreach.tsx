@@ -87,6 +87,17 @@ const Outreach = () => {
     }
   ];
 
+  const handleDownload = () => {
+    // Replace with your actual brochure file path
+    const fileUrl = "src/assets/brochures/tengoku_brochure.pdf";
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'tengoku-brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -97,7 +108,7 @@ const Outreach = () => {
               Public Engagement & Outreach
             </h1>
             <p className="text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
-              Connecting with communities, educating farmers, and building awareness about 
+              Connecting with communities, educating farmers, and building awareness about
               sustainable agricultural practices through biochar technology.
             </p>
           </div>
@@ -150,8 +161,8 @@ const Outreach = () => {
             {events.map((event, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={event.image} 
+                  <img
+                    src={event.image}
                     alt={event.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
@@ -166,11 +177,11 @@ const Outreach = () => {
                       {event.attendees}+
                     </div>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {event.title}
                   </h3>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-sm text-gray-600">
                       <Calendar className="w-4 h-4 mr-2" />
@@ -181,7 +192,7 @@ const Outreach = () => {
                       {event.location}
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 text-sm mb-4">
                     {event.description}
                   </p>
@@ -232,7 +243,7 @@ const Outreach = () => {
             Join Our Community Outreach
           </h2>
           <p className="text-lg text-blue-100 mb-8">
-            Interested in hosting an event or learning more about our outreach programs? 
+            Interested in hosting an event or learning more about our outreach programs?
             Contact us to bring sustainable agriculture education to your community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -242,13 +253,13 @@ const Outreach = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Download Brochure
-            </Button>
-          </div>
+            <Button onClick={handleDownload} size="lg" variant="outline" className="border-white text-gray-900 hover:bg-white/10">
+            Download Brochure
+          </Button>
         </div>
-      </section>
-    </Layout>
+      </div>
+    </section>
+    </Layout >
   );
 };
 
