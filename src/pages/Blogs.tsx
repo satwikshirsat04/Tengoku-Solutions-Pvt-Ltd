@@ -87,6 +87,7 @@ const Blogs = () => {
                   <Link to={`/blog/${post.id}`}>
                     <Button size="sm" variant="outline" className="border-green-300 text-green-700 hover:bg-green-50 w-full">
                       Read Full Article
+                      <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </Link>
                 </CardContent>
@@ -157,6 +158,7 @@ const Blogs = () => {
                   <Link to={`/blog/${post.id}`}>
                     <Button size="sm" variant="outline" className="border-green-300 text-green-700 hover:bg-green-50 w-full">
                       Read Full Article
+                      <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </Link>
                 </CardContent>
