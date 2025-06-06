@@ -414,7 +414,7 @@ const Index = () => {
               </p>
               <div className="flex items-center space-x-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-energy-blue"><AnimatedCounter end={15} />+</div>
+                  <div className="text-2xl font-bold text-energy-blue"><AnimatedCounter end={10} />+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
@@ -439,7 +439,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex flex-col items-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Want to learn more? 
+              Want to learn more?
               {/* about our solutions? */}
             </h3>
             <button onClick={handleDownload}
@@ -617,27 +617,19 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Explainer Video */}
+            {/* Explainer Video */}
             <div className="relative rounded-xl overflow-hidden shadow-lg group">
               <div className="relative aspect-video bg-black">
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-cover"
-                  poster="images/home/biochar thumbnail.webp"
-                  onClick={togglePlay}
-                >
-                  <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                {!isPlaying && (
-                  <div
-                    className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                    onClick={togglePlay}
-                  >
-                    <div className="bg-black/30 rounded-full p-4 backdrop-blur-sm">
-                      <Play className="w-12 h-12 text-white" />
-                    </div>
-                  </div>
-                )}
+                <div className="relative w-full h-full aspect-video">
+                  <iframe
+                    className="w-full h-full object-cover rounded-xl"
+                    src="https://www.youtube.com/embed/1CaMjVoZs8Q"
+                    title="Biochar Explainer Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Biochar Explainer Video</h3>
