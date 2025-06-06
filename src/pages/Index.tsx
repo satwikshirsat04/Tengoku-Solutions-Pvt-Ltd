@@ -633,7 +633,7 @@ const Index = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Biochar Explainer Video</h3>
-                <p className="text-gray-600">Learn how biochar benefits agriculture and the environment</p>
+                <p className="text-gray-600">🌾Learn how biochar benefits agriculture and the environment</p>
               </div>
             </div>
 
