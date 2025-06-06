@@ -440,10 +440,10 @@ const Index = () => {
           <div className="inline-flex flex-col items-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Want to learn more?
-              {/* about our solutions? */}
             </h3>
-            <button onClick={handleDownload}
-              className="relative group px-8 py-4 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+            <button
+              onClick={handleDownload}
+              className="relative group px-8 py-4 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-600 animate-[float_3s_ease-in-out_infinite]"
             >
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-full bg-green-500 opacity-0 group-hover:opacity-50 blur-md group-hover:scale-110 transition-all duration-300"></div>
@@ -461,6 +461,18 @@ const Index = () => {
             </p>
           </div>
         </div>
+
+        {/* Add to your global CSS */}
+        <style>{`
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  `}</style>
       </section>
 
 
