@@ -46,6 +46,10 @@ const Blogs = () => {
 
       {/* Featured Post - Now shows the cost comparison article */}
       <section className="py-12 bg-green-50">
+        <h1 className="text-center text-3xl font-bold text-green-900 mb-6">Featured Posts</h1>
+        <p className="text-center text-lg text-gray-600 mt-2 mb-5">
+              Actionable knowledge for farmers, researchers, and sustainability professionals
+        </p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
@@ -96,10 +100,10 @@ const Blogs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-green-900 mb-4">
               Practical Guides & Research
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 mb-5">
               Actionable knowledge for farmers, researchers, and sustainability professionals
             </p>
           </div>
@@ -180,7 +184,7 @@ const Blogs = () => {
             </Link>
             <a href="tel:+917888009568">
               <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-white/10">
-                Call 7888009568
+                Call +91 7888009568
               </Button>
             </a>
           </div>
