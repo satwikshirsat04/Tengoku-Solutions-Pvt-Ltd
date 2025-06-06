@@ -918,18 +918,22 @@ const Index = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-energy-blue hover:bg-blue-50">
+              <Button size="lg" className="bg-white text-gray-900 hover:bg-blue-50">
                 Get Free Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <a href="tel:+917888009568">
-              <Button size="lg" variant="outline" className="border-white text-energy-blue hover:bg-white/10">
-                Call 7888009568
+              <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-blue-50">
+                Call +91 7888009568
               </Button>
             </a>
           </div>
+          <p className="text-green-100 text-sm mt-4">
+            We're available 24/7 to answer your questions
+          </p>
         </div>
+
       </section>
     </Layout>
   );
