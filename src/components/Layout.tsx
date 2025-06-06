@@ -200,8 +200,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-white-800 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-400">
-                    S.n. 21/4/c,b 504,5th Flr, Goldville<br />
-                    Dange Chowk, Chinchwadgaon<br />
+                    Kant Helix, 3rd floor, Bohir colony,<br />
+                    opp. Tata Motors, Chinchwad,<br />
                     Pune, Maharashtra, India, 411033
                   </span>
                 </li>
