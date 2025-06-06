@@ -27,7 +27,8 @@ import {
   Microscope,
   Dumbbell,
   ThermometerSun,
-  Play
+  Play,
+  Download
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -201,6 +202,17 @@ const Index = () => {
       }
       setIsPlaying(!isPlaying);
     }
+  };
+
+  const handleDownload = () => {
+    // Replace with your actual brochure file path
+    const fileUrl = "src/assets/brochures/tengoku_brochure.pdf";
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'tengoku-brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -422,6 +434,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Download Brochure Section */}
+      <section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex flex-col items-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Want to learn more? 
+              {/* about our solutions? */}
+            </h3>
+            <button onClick={handleDownload}
+              className="relative group px-8 py-4 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-full bg-green-500 opacity-0 group-hover:opacity-50 blur-md group-hover:scale-110 transition-all duration-300"></div>
+
+              {/* Button content */}
+              <div className="flex items-center space-x-2 relative z-10">
+                <Download className="w-6 h-6 text-white" />
+                <span className="text-white font-semibold text-lg">
+                  Download Our Brochure
+                </span>
+              </div>
+            </button>
+            <p className="mt-4 text-gray-600">
+              PDF, 2.4 MB • Updated June 2025
+            </p>
+          </div>
+        </div>
+      </section>
 
 
       {/* Why Choose Us */}
