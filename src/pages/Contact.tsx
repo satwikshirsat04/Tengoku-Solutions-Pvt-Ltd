@@ -498,11 +498,16 @@ const Contact = () => {
           <p className="text-lg text-blue-100 mb-8">
             Take the first step towards energy independence with a free consultation from our experts.
           </p>
-          <Button size="lg" className="bg-white text-energy-blue hover:bg-blue-50">
-            <Phone className="w-5 h-5 mr-2" />
-            Call Now: +91-7888009568
-          </Button>
+          <a href="tel:+917888009568">
+            <Button size="lg" variant="outline" className="border-white text-gray-900 hover:bg-blue-50">
+              Call +91 7888009568
+            </Button>
+          </a>
+          <p className="text-white text-sm mt-4">
+            We're available 24/7 to answer your questions
+          </p>
         </div>
+
       </section>
     </Layout>
   );
